@@ -1,0 +1,12 @@
+<h2 style="color: black; background-color: red; text-align: center;">Products</h2>
+<div></div>
+<div style="background-color:greenyellow; color: blue;" id="products" class="">
+      <div *ngFor="let p of products" class="product"> 
+        <img src={{p.thumbnail}} alt={{p.title}} height="150"
+         width="150">
+       <a routerLink="./product/{{p.id}}"><h3>{{p.title}}</h3> <p>{{p.price}}</p></a>
+        
+        <button (click)="add(p)">Add to cart</button>
+      </div>
+    </div>
+

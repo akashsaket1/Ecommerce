@@ -1,0 +1,7 @@
+<h2>Cart</h2>
+<div *ngFor="let i of items; let in= index" style="background-color: brown;">
+    <img src={{i.thumbnail}} alt={{i.title}} height="300"
+         width="300">
+ <p>{{i.title}} {{i.price}} <button (click)="remove(in)">❎</button></p>
+</div>
+<button>Checkout</button>
